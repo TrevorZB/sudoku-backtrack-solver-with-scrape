@@ -93,9 +93,9 @@ class BoardState:
         print("-------------------------")
 
 
-def main():
+def main(board):
     # uses scrape to initialize the start state of the board
-    state = BoardState(scrape.getboard(1), None)
+    state = BoardState(board, None)
     print("ORIGINAL PUZZLE:")
     state.printboard()
 
@@ -119,17 +119,15 @@ def main():
 
         # test if a goal has been reached
         if state.isgoalstate():
-            print("SOLUTION FOUND:")
-            state.printboard()
-            break
+            # print("SOLUTION FOUND:")
+            # state.printboard()
+            return state.board
 
         # set state to next child
         state = state.createchild()
 
-
-main()
-
-
+# uncomment to run
+# main(scrape.getboard(1))
 
 
 
