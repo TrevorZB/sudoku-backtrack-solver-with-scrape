@@ -119,8 +119,8 @@ def main(board):
 
         # test if a goal has been reached
         if state.isgoalstate():
-            # print("SOLUTION FOUND:")
-            # state.printboard()
+            print("SOLUTION FOUND:")
+            state.printboard()
             return state.board
 
         # set state to next child
@@ -128,15 +128,3 @@ def main(board):
 
 # uncomment to run
 # main(scrape.getboard(1))
-
-
-
-
-
-
-
-
-
-
-
-
